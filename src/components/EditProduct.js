@@ -1,24 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { addProduct } from '../actions';
+import { editProduct } from '../actions';
+import { useHistory } from 'react-router-dom';
+// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-const AddProduct = (props) => {
-    let history = useHistory();
-
-    // useEffect(()=> {
-    //     props.addProduct({
-    //         productName: "Redgear Dragonwar",
-    //         productDesc: "Gaming Mouse",
-    //         manufacturer: "Redgear",
-    //         quantity: 5,
-    //         price: 600
-    //     })
-    //     history.push("/products");
-    // }, []);
-
+const EditProduct = (props) => {
+    
+    const history = useHistory();
+    const { id, productName, productDesc, manufacturer, quantity, price, } = props.product;
     const style = {
         width:"40%",
         margin:"5px",
@@ -30,11 +21,11 @@ const AddProduct = (props) => {
     return (
         <Formik 
             initialValues = {{
-                productName: '',
-                productDesc: '',
-                manufacturer: '',
-                quantity: '',
-                price: ''
+                productName: productName,
+                productDesc: productDesc,
+                manufacturer: manufacturer,
+                quantity: quantity,
+                price: price
             }}
 
             validationSchema = {Yup.object().shape({
@@ -52,9 +43,12 @@ const AddProduct = (props) => {
             })}
 
             onSubmit = { fields => {
-                //POST  call goes here
-                console.log(fields);
-                props.addProduct(fields);
+                //PUT  call goes here
+                const product = {
+                    ...fields,
+                    id: id
+                }
+                props.editProduct(product);
                 history.push('/products')
             }}
             render = {( {errors, status, touched} ) => (
@@ -89,5 +83,7 @@ const AddProduct = (props) => {
             )}
         />
     );
+
 }
-export default connect(null, { addProduct })(AddProduct);
+
+export default connect(null, { editProduct })(EditProduct);

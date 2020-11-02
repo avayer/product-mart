@@ -23,3 +23,10 @@ export const deleteProduct = (id) => {
         dispatch({ type: 'DELETE_PRODUCT', payload: id });
     }
 }
+export const editProduct = (product) => {
+    return async function(dispatch) {
+        const res = await dataApi.put('/products/'+product.id, product);
+
+        dispatch({ type: 'EDIT_PRODUCT', payload: res.data});
+    }
+}

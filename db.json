@@ -1,39 +1,44 @@
 {
   "products": [
     {
-      "id": 1,
-      "productName": "Moto G5",
-      "productDesc": "Mobile phone",
-      "manufacturer": "Motorola",
-      "quantity": 2,
-      "price": 13000,
-      "userId": 1
+      "productName": "Asus ROG G15",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Asus",
+      "quantity": "10",
+      "price": "96000",
+      "id": 4
     },
     {
-      "id": 2,
-      "productName": "Racold Geyser",
-      "productDesc": "Electronic Appliances",
-      "manufacturer": "Raycold",
-      "quantity": 3,
-      "price": 6000,
-      "userId": 1
+      "productName": "Acer Predator Laptop",
+      "productDesc": "Gaming Laptop | High Performance",
+      "manufacturer": "Acer",
+      "quantity": "25",
+      "price": "112001",
+      "id": 5
     },
     {
-      "id": 3,
-      "productName": "Dell Inspiron",
-      "productDesc": "Laptops",
-      "manufacturer": "Dell",
-      "quantity": 4,
-      "price": 50000,
-      "userId": 2
+      "productName": "RedGear Dragon war ",
+      "productDesc": "Gaming Mouse | 2 Customizable buttons",
+      "manufacturer": "RedGear",
+      "quantity": "3",
+      "price": "1000",
+      "id": 6
     },
     {
-      "id": 16,
-      "productName": "Redgear Dragonwar",
-      "productDesc": "Gaming Mouse",
-      "manufacturer": "Redgear",
-      "quantity": 5,
-      "price": 600
+      "productName": "Asus ROG G17",
+      "productDesc": "RGB Gaming Laptop",
+      "manufacturer": "Asus",
+      "quantity": "5",
+      "price": "130000",
+      "id": 7
+    },
+    {
+      "productName": "er",
+      "productDesc": "wr",
+      "manufacturer": "wer",
+      "quantity": "2",
+      "price": "12",
+      "id": 8
     }
   ],
   "users": [

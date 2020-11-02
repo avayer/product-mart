@@ -3,6 +3,7 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 
 import AddProduct from './AddProduct';
 import AllProducts from './AllProducts';
+import EditProduct from './EditProduct';
 import NoPageFound from './NoPageFound';
 
 const App = () => {
@@ -14,8 +15,14 @@ const App = () => {
 
             <Switch>
                 {/* <Route exact path="/" component={landing} /> */}
-                <Route path="/products" component={AllProducts} />
+                <Route exact path="/products" component={AllProducts} />
                 <Route path="/addProduct" component={AddProduct} />
+                <Route path="/products/edit" 
+                render={(props) => {
+                    return <EditProduct 
+                        product={props.location.productProps}
+                    />
+                }} />
                 <Route component={NoPageFound} />
             </Switch>
         </div>

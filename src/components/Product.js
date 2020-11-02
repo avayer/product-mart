@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import { deleteProduct } from '../actions';
 
@@ -23,6 +23,16 @@ const Product = (props) => {
             <p>{ manufacturer }</p>
             <p>{ quantity }</p>
             <p>{ price }</p>
+            <button>
+                <Link to={{
+                    pathname: '/products/edit',
+                    productProps: {
+                        ...props.product
+                    }
+                }}>
+                    Edit
+                </Link>
+            </button>
     <button onClick={()=>onDeleteClick(id)}>Delete { productName }</button>
         </div>
     );

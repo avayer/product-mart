@@ -8,35 +8,38 @@ import SearchField from './SearchField';
 
 class AllProducts extends React.Component {
 
-    state = {products: [], fullData: [], msg: ''};
+    state = {products: [], msg: ''};
 
     onSearchSubmit = (term) => {
-        // this.
+        console.log(term)
         if(term !== '') {
-            let searchResults = this.state.fullData.filter((product) => {
+            let searchResults = this.props.products.filter((product) => {
                 return product.productName.toLowerCase().includes(term.toLowerCase());
             });
+            console.log(searchResults);
 
             if(searchResults.length===0) {
-                this.setState({ products: this.state.fullData, msg: 'No results Found Showing All Products' })
+                this.setState({ products: this.props.products, msg: 'No results Found Showing All Products' })
             } else {
-                this.setState({ products: searchResults, msg: '' })
+                this.setState({ products: searchResults, msg: 'showing results' })
             }
-            console.log(searchResults);
+        }else {
+            this.setState({ products: this.props.products, msg: '' });
         }
     }
 
     async componentDidMount () {
+        document.title = "Product Mart | Inventory";
         await this.props.fetchProducts();
-        this.setState({ products:this.props.products, fullData: this.props.products })
-        console.log(this.state.products);
+        this.setState({ products:this.props.products });
     }
+
     render () {
         return (
             <div>
                 <SearchField onTermSubmit={this.onSearchSubmit} />
                 <p>{this.state.msg}</p>
-                <ProductsList products={this.state.products} />
+                <ProductsList products={this.props.products} />
                 <br/>
                 <Link to="/addProduct">Add product</Link>
             </div>

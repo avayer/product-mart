@@ -30,3 +30,12 @@ export const editProduct = (product) => {
         dispatch({ type: 'EDIT_PRODUCT', payload: res.data});
     }
 }
+
+export const updateViewCount = (product) => {
+    return async function (dispatch) {
+        const updatedProduct = Object.assign({}, product, {count: product.count+1});
+        const res = await dataApi.put('/products/' +product.id, updatedProduct);
+
+        dispatch({ type: 'UPDATE_VIEW_COUNT', payload: res.data })
+    }
+}

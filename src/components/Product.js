@@ -1,41 +1,39 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useHistory, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
-import { deleteProduct } from '../actions';
+import { updateViewCount } from '../actions';
 
 const Product = (props) => {
 
-    let history = useHistory();
-
-    const {id, productName, productDesc, manufacturer, quantity, price, } = props.product;
-    
-    function onDeleteClick(id) {
-        props.deleteProduct(id);
-        history.push('/products');
+    const onViewClick = (product) => {
+        props.updateViewCount(product)
     }
 
+    const {id, productName, productDesc, manufacturer, quantity, price, } = props.product;
+
     return (
-        <div>
-            <p>{ id }</p>
-            <p>{ productName }</p>
-            <p>{ productDesc }</p>
-            <p>{ manufacturer }</p>
-            <p>{ quantity }</p>
-            <p>{ price }</p>
-            <button>
-                <Link to={{
-                    pathname: '/products/edit',
-                    productProps: {
-                        ...props.product
-                    }
-                }}>
-                    Edit
-                </Link>
-            </button>
-    <button onClick={()=>onDeleteClick(id)}>Delete { productName }</button>
-        </div>
+      <div>
+        <p>{id}</p>
+        <p>{productName}</p>
+        <p>{productDesc}</p>
+        <p>{manufacturer}</p>
+        <p>{quantity}</p>
+        <p>{price}</p>
+        <button onClick={()=>onViewClick(props.product)}>
+          <Link
+            to={{
+              pathname: "/products/" + productName,
+              productProps: {
+                ...props.product,
+              },
+            }}
+          >
+            View
+          </Link>
+        </button>
+      </div>
     );
 }
 
-export default connect(null, { deleteProduct })(Product);
+export default connect(null, { updateViewCount })(Product);

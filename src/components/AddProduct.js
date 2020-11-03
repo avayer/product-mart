@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
@@ -8,16 +8,9 @@ import { addProduct } from '../actions';
 const AddProduct = (props) => {
     let history = useHistory();
 
-    // useEffect(()=> {
-    //     props.addProduct({
-    //         productName: "Redgear Dragonwar",
-    //         productDesc: "Gaming Mouse",
-    //         manufacturer: "Redgear",
-    //         quantity: 5,
-    //         price: 600
-    //     })
-    //     history.push("/products");
-    // }, []);
+    useEffect(()=> {
+        document.title = 'Add Product || Product Mart';
+    }, []);
 
     const style = {
         width:"40%",
@@ -53,8 +46,7 @@ const AddProduct = (props) => {
 
             onSubmit = { fields => {
                 //POST  call goes here
-                console.log(fields);
-                props.addProduct(fields);
+                props.addProduct({ ...fields, count: 0 });
                 history.push('/products')
             }}
             render = {( {errors, status, touched} ) => (
@@ -84,7 +76,7 @@ const AddProduct = (props) => {
                         <Field name="price" type="text" className={`${errors.price && touched.price} ? is-invalid : ''`} />
                         <ErrorMessage style={{color:"red"}} name="price" component="div" className="ui pointing label invalid-feedback" />
                     </div>
-                    <button className="ui button" type="submit">Submit</button>                                          
+                    <button className="ui button" type="submit">Add product</button>                                          
                 </Form>
             )}
         />

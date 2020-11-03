@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -17,6 +17,10 @@ const EditProduct = (props) => {
         padding: "5px",
         borderRadius: "5px"
     }
+
+    useEffect(() => {
+      document.title = `Edit ${productName}`;
+    }, [productName]);
 
     return (
         <Formik 
@@ -78,7 +82,7 @@ const EditProduct = (props) => {
                         <Field name="price" type="text" className={`${errors.price && touched.price} ? is-invalid : ''`} />
                         <ErrorMessage style={{color:"red"}} name="price" component="div" className="ui pointing label invalid-feedback" />
                     </div>
-                    <button className="ui button" type="submit">Submit</button>                                          
+                    <button className="ui button" type="submit">save</button>                                          
                 </Form>
             )}
         />

@@ -1,31 +1,13 @@
 {
   "products": [
     {
-      "productName": "Asus ROG G15",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Asus",
-      "quantity": "10",
-      "price": "96800",
-      "id": 4,
-      "count": 1328
-    },
-    {
-      "productName": "Acer Predator Laptop",
-      "productDesc": "Gaming Laptop | High Performance",
-      "manufacturer": "Acer",
-      "quantity": "25",
-      "price": "112001",
-      "id": 5,
-      "count": 125
-    },
-    {
       "productName": "RedGear Dragon war ",
       "productDesc": "Gaming Mouse | 2 Customizable buttons",
       "manufacturer": "RedGear",
       "quantity": "3",
       "price": "1000",
       "id": 6,
-      "count": 134
+      "count": 135
     },
     {
       "productName": "Asus ROG G17",
@@ -43,7 +25,7 @@
       "quantity": "2",
       "price": "12",
       "id": 8,
-      "count": 813
+      "count": 815
     }
   ],
   "users": [
@@ -53,7 +35,7 @@
       "username": "avayer",
       "password": "ava123",
       "firstName": "ava",
-      "secondName": "ava",
+      "lastName": "ava",
       "location": "Hyderabad",
       "mobileNumber": "9191919191"
     },
@@ -63,9 +45,39 @@
       "username": "coldflamer",
       "password": "cold123",
       "firstName": "cold",
-      "secondName": "flamer",
+      "lastName": "flamer",
       "location": "Secunderabad",
       "mobileNumber": "7171717171"
+    },
+    {
+      "firstName": "someone",
+      "lastName": "someone",
+      "email": "someone@someone.com",
+      "username": "someone",
+      "password": "someone",
+      "location": "someone",
+      "mobileNumber": "1231231231",
+      "id": 3
+    },
+    {
+      "firstName": "ewfre",
+      "lastName": "wefre",
+      "email": "ava@ava.com",
+      "username": "ewfe",
+      "password": "wfge",
+      "location": "fgr",
+      "mobileNumber": "wfregr",
+      "id": 4
+    },
+    {
+      "firstName": "cypher",
+      "lastName": "MindFreak",
+      "email": "cypher@valorant.com",
+      "username": "cypher",
+      "password": "cypher",
+      "location": "India",
+      "mobileNumber": "919191919",
+      "id": 5
     }
   ]
 }

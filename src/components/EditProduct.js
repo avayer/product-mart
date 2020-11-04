@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 const EditProduct = (props) => {
     
     const history = useHistory();
-    const { id, productName, productDesc, manufacturer, quantity, price, } = props.product;
+    const { id, productName, productDesc, manufacturer, quantity, price, count } = props.product;
     const style = {
         width:"40%",
         margin:"5px",
@@ -50,7 +50,8 @@ const EditProduct = (props) => {
                 //PUT  call goes here
                 const product = {
                     ...fields,
-                    id: id
+                    id: id,
+                    count: count
                 }
                 props.editProduct(product);
                 history.push('/products')

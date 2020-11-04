@@ -1,28 +1,24 @@
 import React from 'react';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import AddProduct from './AddProduct';
 import AllProducts from './AllProducts';
 import EditProduct from './EditProduct';
+import Landing from './Landing';
+import LoginPage from './LoginPage';
 import NoPageFound from './NoPageFound';
 import ProductDetail from './ProductDetail';
 import ProductStats from './ProductStats';
+import RegisterPage from './RegisterPage';
 
 const App = () => {
     return (
       <div>
-        {/* <NavLink activeClassName="active" to="/">Home</NavLink> */}
-        <NavLink activeClassName="active" to="/products">
-          Products
-        </NavLink>
-        <NavLink activeClassName="active" to="/productStats">
-          Products-Statistics
-        </NavLink>
-        {/* <NavLink activeClassName="active" to="/about">About</NavLink> */}
-
         <Switch>
-          {/* <Route exact path="/" component={landing} /> */}
+          <Route exact path="/" component={Landing} />
           <Route exact path="/products" component={AllProducts} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
           <Route path="/addProduct" component={AddProduct} />
           <Route
             exact

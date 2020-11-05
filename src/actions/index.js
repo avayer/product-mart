@@ -1,6 +1,5 @@
 import dataApi from '../api/dataApi';
 
-
 export const fetchProducts = () => {
     return async function(dispatch) {
         const response = await dataApi.get('/products');
@@ -37,5 +36,5 @@ export const updateViewCount = (product) => {
         const res = await dataApi.put('/products/' +product.id, updatedProduct);
 
         dispatch({ type: 'UPDATE_VIEW_COUNT', payload: res.data })
-    }
-}
+    };
+};

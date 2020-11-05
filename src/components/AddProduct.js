@@ -9,6 +9,7 @@ const AddProduct = (props) => {
     let history = useHistory();
 
     useEffect(()=> {
+        if(localStorage.getItem('id')===null) history.push('/login')
         document.title = 'Add Product || Product Mart';
     }, []);
 
@@ -46,8 +47,9 @@ const AddProduct = (props) => {
 
             onSubmit = { fields => {
                 //POST  call goes here
-                props.addProduct({ ...fields, count: 0 });
-                history.push('/products')
+                const id = parseInt(localStorage.getItem('id'));
+                props.addProduct({ ...fields, count: 0, userId: id });
+                history.push('/myproducts')
             }}
             render = {( {errors, status, touched} ) => (
                 <Form className="ui fluid form" style={style}>

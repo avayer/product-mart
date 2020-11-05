@@ -1,31 +1,34 @@
 {
   "products": [
     {
-      "productName": "RedGear Dragon war ",
-      "productDesc": "Gaming Mouse | 2 Customizable buttons",
-      "manufacturer": "RedGear Mouse",
-      "quantity": "3",
-      "price": "1011",
-      "id": 6,
-      "count": 141
-    },
-    {
-      "productName": "Asus ROG G17",
-      "productDesc": "RGB Gaming Laptop",
-      "manufacturer": "Asus",
-      "quantity": "5",
-      "price": "130000",
-      "id": 7,
-      "count": 761
-    },
-    {
       "productName": "er",
       "productDesc": "wr",
       "manufacturer": "wer",
       "quantity": "2",
       "price": "12",
       "id": 8,
-      "count": 815
+      "count": 826,
+      "userId": 2
+    },
+    {
+      "productName": "wefrgwre",
+      "productDesc": "wefrtger",
+      "manufacturer": "wefwfw",
+      "quantity": "1213",
+      "price": "1313243",
+      "id": 10,
+      "count": 12,
+      "userId": 7
+    },
+    {
+      "productName": "earphones",
+      "productDesc": "Noise cancellation earphones",
+      "manufacturer": "JBL",
+      "quantity": "100",
+      "price": "1100",
+      "id": 11,
+      "count": 2,
+      "userId": 7
     }
   ],
   "users": [
@@ -88,6 +91,16 @@
       "location": "woifjwi",
       "mobileNumber": "weoifjwi",
       "id": 6
+    },
+    {
+      "firstName": "new",
+      "lastName": "new",
+      "email": "new@new.com",
+      "username": "new",
+      "password": "new",
+      "location": "new",
+      "mobileNumber": "new",
+      "id": 7
     }
   ]
 }

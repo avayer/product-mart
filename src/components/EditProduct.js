@@ -49,12 +49,13 @@ const EditProduct = (props) => {
             onSubmit = { fields => {
                 //PUT  call goes here
                 const product = {
-                    ...fields,
-                    id: id,
-                    count: count
-                }
+                  ...fields,
+                  id: id,
+                  count: count,
+                  userId: parseInt(localStorage.getItem('id')),
+                };
                 props.editProduct(product);
-                history.push('/products')
+                history.push('/myproducts')
             }}
             render = {( {errors, status, touched} ) => (
                 <Form className="ui fluid form" style={style}>

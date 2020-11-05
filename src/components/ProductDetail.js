@@ -14,15 +14,41 @@ const ProductDetail = (props) => {
           manufacturer,
           quantity,
           price,
+          userId
         } = props.product;
-
+        
         useEffect(() => {
             document.title = productName;
         }, [productName]);
     
         function onDeleteClick(id) {
+          console.log(id)
             props.deleteProduct(id);
-            history.push("/products");
+            history.push("/myproducts");
+        }
+        function showButtonsBasedOnAuth(userId) {
+          const loggedUserId = parseInt(localStorage.getItem('id'));
+          if (localStorage.getItem('id')!==null && loggedUserId === userId) {
+            return(
+              <div>
+                <button>
+                  <Link
+                    to={{
+                      pathname: "/products/edit",
+                      productProps: {
+                        ...props.product,
+                      },
+                    }}
+                  >
+                    Edit
+                  </Link>
+                </button>
+                <button onClick={() => onDeleteClick(id)}>Delete {productName}</button>
+              </div>
+            );
+          } else {
+            return <div></div>
+          }
         }
 
     return (
@@ -33,19 +59,7 @@ const ProductDetail = (props) => {
         <p>{manufacturer}</p>
         <p>{quantity}</p>
         <p>{price}</p>
-        <button>
-          <Link
-            to={{
-              pathname: "/products/edit",
-              productProps: {
-                ...props.product,
-              },
-            }}
-          >
-            Edit
-          </Link>
-        </button>
-        <button onClick={() => onDeleteClick(id)}>Delete {productName}</button>
+        {showButtonsBasedOnAuth(userId)}
       </div>
     );
 }

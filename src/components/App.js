@@ -10,6 +10,8 @@ import NoPageFound from './NoPageFound';
 import ProductDetail from './ProductDetail';
 import ProductStats from './ProductStats';
 import RegisterPage from './RegisterPage';
+import MyProducts from "./MyProducts";
+import ProfilePage from './ProfilePage';
 
 const App = () => {
     return (
@@ -20,13 +22,16 @@ const App = () => {
           <Route path="/login" component={LoginPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/addProduct" component={AddProduct} />
+          <Route path="/myproducts" component={MyProducts} />
+          <Route path="/myprofile" render={(props)=>{
+            return <ProfilePage userId={props.location.userProps.id} />
+          }} />
           <Route
             exact
             path="/products/edit"
             render={(props) => {
               return <EditProduct product={props.location.productProps} />;
-            }}
-          />
+            }} />
           <Route
             path="/products/:name"
             render={(props) => {

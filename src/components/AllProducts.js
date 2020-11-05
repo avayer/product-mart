@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import { fetchProducts } from '../actions';
 import ProductsList from './ProductsList';
@@ -41,7 +40,6 @@ class AllProducts extends React.Component {
                 <p>{this.state.msg}</p>
                 <ProductsList products={this.props.products} />
                 <br/>
-                <Link to="/addProduct">Add product</Link>
             </div>
         );
     }

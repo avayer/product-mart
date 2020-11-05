@@ -15,12 +15,22 @@ const Landing = () => {
       );
     } else {
       return (
-         <div>
-         <p>{}</p>
+        <div>
+          <p>{}</p>
           <Link to="/products">Products</Link>
+          <Link to="/myproducts">My Products</Link>
+          <Link to="/addProduct">Add product</Link>
+          <Link
+            to={{
+              pathname: "/myprofile",
+              userProps: { id: parseInt(localStorage.getItem("id")) },
+            }}
+          >
+            My Profile
+          </Link>
           <Link to="/productStats">Products-Statistics</Link>
-          <button onClick={()=>logout()}>Logout</button>
-        </div>       
+          <button onClick={() => logout()}>Logout</button>
+        </div>
       );
     }
   };

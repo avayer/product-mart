@@ -5,5 +5,5 @@ import usersReducers from './usersReducer';
 
 export default combineReducers({
     products: productsReducer,
-    users: usersReducers
+    user: usersReducers
 })

@@ -55,7 +55,6 @@ const LoginPage = (props) => {
                   if (user.length === 0) {
                     setMsg("Incorrect username or password");
                   } else {
-                    console.log(user, user[0].username, user[0].id);
                     localStorage.setItem("username", user[0].username);
                     localStorage.setItem("id", user[0].id);
                     history.push("/");

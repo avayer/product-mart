@@ -3,11 +3,11 @@
     {
       "productName": "RedGear Dragon war ",
       "productDesc": "Gaming Mouse | 2 Customizable buttons",
-      "manufacturer": "RedGear",
+      "manufacturer": "RedGear Mouse",
       "quantity": "3",
-      "price": "1000",
+      "price": "1011",
       "id": 6,
-      "count": 135
+      "count": 141
     },
     {
       "productName": "Asus ROG G17",
@@ -78,6 +78,16 @@
       "location": "India",
       "mobileNumber": "919191919",
       "id": 5
+    },
+    {
+      "firstName": "weeiwi",
+      "lastName": "wifjjeio",
+      "email": "avayer1@ava.com",
+      "username": "weifjwie",
+      "password": "woifjwi",
+      "location": "woifjwi",
+      "mobileNumber": "weoifjwi",
+      "id": 6
     }
   ]
 }

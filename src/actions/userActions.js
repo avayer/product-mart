@@ -15,3 +15,16 @@ export const getUserData = (userId) => {
         dispatch({ type:'FIND_USER', payload: res.data });
     }
 }
+export const addProductToCart = (userId, productId) => {
+    return async function(dispatch) {
+        const user = await dataApi.get('/users/'+userId);
+        user.data.cart.push(productId);
+        await updateUser(user.data, userId);
+        console.log(user.data)
+        dispatch({ type: 'ADD_TO_CART', payload: user.data })
+    }
+}
+
+const updateUser = (user, userId) => {
+    dataApi.put('/users/'+userId, user);
+}

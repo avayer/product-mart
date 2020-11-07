@@ -12,8 +12,10 @@ import ProductStats from './ProductStats';
 import RegisterPage from './RegisterPage';
 import MyProducts from "./MyProducts";
 import ProfilePage from './ProfilePage';
+import Cart from './Cart';
 
 const App = () => {
+
     return (
       <div>
         <Switch>
@@ -23,6 +25,7 @@ const App = () => {
           <Route path="/register" component={RegisterPage} />
           <Route path="/addProduct" component={AddProduct} />
           <Route path="/myproducts" component={MyProducts} />
+          <Route path="/cart" component={Cart} />
           <Route path="/myprofile" render={(props)=>{
             return <ProfilePage userId={props.location.userProps.id} />
           }} />

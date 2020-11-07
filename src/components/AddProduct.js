@@ -48,7 +48,8 @@ const AddProduct = (props) => {
             onSubmit = { fields => {
                 //POST  call goes here
                 const id = parseInt(localStorage.getItem('id'));
-                props.addProduct({ ...fields, count: 0, userId: id });
+                const rating = Math.floor(Math.random() * (5 - 0)) + 0;
+                props.addProduct({ ...fields, count: 0, userId: id, rating: rating });
                 history.push('/myproducts')
             }}
             render = {( {errors, status, touched} ) => (

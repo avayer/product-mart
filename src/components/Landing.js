@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
+// import NavbarComponent from './ui-components/NavbarComponent';
 const Landing = () => {
 
   let history = useHistory();
@@ -29,6 +30,7 @@ const Landing = () => {
             My Profile
           </Link>
           <Link to="/productStats">Products-Statistics</Link>
+          <Link to="/cart">Cart</Link>
           <button onClick={() => logout()}>Logout</button>
         </div>
       );

@@ -1,34 +1,123 @@
 {
   "products": [
     {
-      "productName": "er",
-      "productDesc": "wr",
-      "manufacturer": "wer",
-      "quantity": "2",
-      "price": "12",
+      "productName": "MSI GF63 Thin Core i7 9th Gen",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Intel",
+      "quantity": "1",
+      "price": "66000",
       "id": 8,
-      "count": 826,
-      "userId": 2
+      "count": 87,
+      "userId": 2,
+      "rating": 4.3
     },
     {
-      "productName": "wefrgwre",
-      "productDesc": "wefrtger",
-      "manufacturer": "wefwfw",
-      "quantity": "1213",
-      "price": "1313243",
+      "productName": "MSI Alpha 15 Ryzen 7",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Dell",
+      "quantity": "1",
+      "price": "69000",
       "id": 10,
-      "count": 12,
+      "count": 40,
+      "userId": 7,
+      "rating": 3.3
+    },
+    {
+      "productName": "Apple MacBook Air Core i5",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Apple",
+      "quantity": "1",
+      "price": "70001",
+      "id": 11,
+      "count": 20,
       "userId": 7
     },
     {
-      "productName": "earphones",
-      "productDesc": "Noise cancellation earphones",
-      "manufacturer": "JBL",
-      "quantity": "100",
-      "price": "1100",
-      "id": 11,
-      "count": 2,
+      "productName": "HP 15s Core i3 10th Gen",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Hp",
+      "quantity": "1",
+      "price": "68000",
+      "id": 12,
+      "count": 12,
+      "userId": 7,
+      "rating": 4.3
+    },
+    {
+      "productName": "HP 15s Core i5 10th Gen",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Hewlett Pacakrd",
+      "quantity": "1",
+      "price": "49000",
+      "id": 13,
+      "count": 19,
       "userId": 7
+    },
+    {
+      "productName": "Apple MacBook Air Core i5",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Apple",
+      "quantity": "1",
+      "price": "70000",
+      "id": 14,
+      "count": 9,
+      "userId": 7,
+      "rating": 4.8
+    },
+    {
+      "productName": "Dell Vostro Core i3 10th Gen",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Dell",
+      "quantity": "1",
+      "price": "37000",
+      "id": 15,
+      "count": 8,
+      "userId": 7,
+      "rating": 3
+    },
+    {
+      "productName": "Microsoft Surface Pro Core i5",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Microsoft",
+      "quantity": "1",
+      "price": "100000",
+      "id": 16,
+      "count": 11,
+      "userId": 7,
+      "rating": 4
+    },
+    {
+      "productName": "Asus VivoBook 15 Core i3",
+      "productDesc": "Gaming Laptop",
+      "manufacturer": "Microsoft",
+      "quantity": "1",
+      "price": "100000",
+      "id": 17,
+      "count": 4,
+      "userId": 7,
+      "rating": 2
+    },
+    {
+      "productName": "Motorola One Power",
+      "productDesc": "Android SmartPhone",
+      "manufacturer": "Motorola",
+      "quantity": "10",
+      "price": "101010",
+      "count": 3,
+      "userId": 7,
+      "id": 18,
+      "rating": 4.8
+    },
+    {
+      "productName": "Bajaj Fan",
+      "productDesc": "Nice fan",
+      "manufacturer": "Bajaj",
+      "quantity": "11231",
+      "price": "121",
+      "count": 3,
+      "userId": 7,
+      "rating": 2,
+      "id": 19
     }
   ],
   "users": [
@@ -40,7 +129,8 @@
       "firstName": "ava",
       "lastName": "ava",
       "location": "Hyderabad",
-      "mobileNumber": "9191919191"
+      "mobileNumber": "9191919191",
+      "cart": []
     },
     {
       "id": 2,
@@ -50,7 +140,8 @@
       "firstName": "cold",
       "lastName": "flamer",
       "location": "Secunderabad",
-      "mobileNumber": "7171717171"
+      "mobileNumber": "7171717171",
+      "cart": []
     },
     {
       "firstName": "someone",
@@ -60,7 +151,8 @@
       "password": "someone",
       "location": "someone",
       "mobileNumber": "1231231231",
-      "id": 3
+      "id": 3,
+      "cart": []
     },
     {
       "firstName": "ewfre",
@@ -70,7 +162,8 @@
       "password": "wfge",
       "location": "fgr",
       "mobileNumber": "wfregr",
-      "id": 4
+      "id": 4,
+      "cart": []
     },
     {
       "firstName": "cypher",
@@ -80,7 +173,12 @@
       "password": "cypher",
       "location": "India",
       "mobileNumber": "919191919",
-      "id": 5
+      "id": 5,
+      "cart": [
+        10,
+        11,
+        19
+      ]
     },
     {
       "firstName": "weeiwi",
@@ -90,7 +188,8 @@
       "password": "woifjwi",
       "location": "woifjwi",
       "mobileNumber": "weoifjwi",
-      "id": 6
+      "id": 6,
+      "cart": []
     },
     {
       "firstName": "new",
@@ -100,7 +199,30 @@
       "password": "new",
       "location": "new",
       "mobileNumber": "new",
-      "id": 7
+      "id": 7,
+      "cart": []
+    },
+    {
+      "firstName": "Raman",
+      "lastName": "Kumar",
+      "email": "rjha4647@gmail.com",
+      "username": "rk123",
+      "password": "rk123",
+      "location": "Bhopal",
+      "mobileNumber": "9090989776",
+      "id": 8,
+      "cart": []
+    },
+    {
+      "firstName": "Sai Anurag",
+      "lastName": "Mahankali",
+      "email": "anurag@gmail.com",
+      "username": "msa11",
+      "password": "anurag",
+      "location": "Hyderabad",
+      "mobileNumber": "9999900000",
+      "cart": [],
+      "id": 9
     }
   ]
 }

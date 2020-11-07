@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid } from 'semantic-ui-react';
 
 import Product from './Product';
 
@@ -9,9 +10,9 @@ const ProductsList = (props) => {
     })
 
     return (
-        <div>
+        <Grid columns={4} stackable style={{'marginLeft': '200px '}}>
             {renderedProducts}
-        </div>
+        </Grid>
     );
 }
 

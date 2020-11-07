@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Container} from "reactstrap";
+import { Container, Item } from "semantic-ui-react";
 
 import { fetchProducts } from "../actions";
 import ShowUserProducts from './ShowUserProducts';
@@ -15,8 +15,10 @@ class MyProducts extends React.Component {
 
   render() {
     return (
-      <Container >
-       <ShowUserProducts products={this.props.products} />
+      <Container>
+        <Item.Group divided>
+          <ShowUserProducts products={this.props.products} />
+        </Item.Group>
       </Container>
     );
   }

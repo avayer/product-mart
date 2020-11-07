@@ -1,17 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';    
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Row,
-  Col
-} from "reactstrap";
+import { Link, useHistory } from 'react-router-dom';
+import { Item, Image } from "semantic-ui-react";
 
 import { updateViewCount } from "../actions";
 
@@ -29,33 +19,28 @@ const ShowUserProducts = (props) => {
     const renderedProducts = props.products.map((product)=>{
 
         return (
-          <Row key={product.id}>
-            <Col sm="12">
-              <Card>
-                <CardImg top width="50%" height="50%" src={product.url} />
-                <CardBody>
-                  <CardTitle tag="h5">{product.productName}</CardTitle>
-                  <CardSubtitle tag="h6" className="mb-2 text-muted">
-                    {product.manufacturer}
-                  </CardSubtitle>
-                  <CardText>{product.productDesc}</CardText>
-                  <CardText>Rs.{product.price}</CardText>
-                  <Button onClick={() => onViewClick(product)}>
-                    <Link
-                      to={{
-                        pathname: "/products/" + product.productName,
-                        productProps: {
-                          ...product,
-                        },
-                      }}
-                    >
-                      View
-                    </Link>
-                  </Button>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+          <Item>
+            <Item.Image src="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-React/master/docs/public/images/image-16by9.png" />
+            <Item.Content>
+              <Item.Header as="a">Content Header</Item.Header>
+              <Item.Meta>
+                <span>Date</span>
+                <span>Category</span>
+              </Item.Meta>
+              <Item.Description>
+                A description which may flow for several lines and give context
+                to the content.
+              </Item.Description>
+              <Item.Extra>
+                <Image
+                  avatar
+                  circular
+                  src="/images/wireframe/square-image.png"
+                />
+                Username
+              </Item.Extra>
+            </Item.Content>
+          </Item>
         );
     })
     return (

@@ -5,12 +5,9 @@ import * as Yup from 'yup';
 import dataApi from '../api/dataApi';
 
 const style = {
-  width: "40%",
-  margin: "5px",
-  border: "1px solid grey",
-  padding: "5px",
-  borderRadius: "5px",
-};
+  'width': '40%',
+  'margin': '10% auto'
+}
 
 const LoginPage = (props) => {
 
@@ -38,9 +35,7 @@ const LoginPage = (props) => {
             return <Redirect to="/" />
         } else {
           return (
-            <div>
-              Login Page
-              <p>{msg}</p>
+            <div style={style}>
               <Formik
                 initialValues={{
                   email: "",
@@ -61,52 +56,68 @@ const LoginPage = (props) => {
                   }
                 }}
                 render={({ errors, status, touched }) => (
-                  <Form className="ui fluid form" style={style}>
-                    <div className="field">
-                      <label className="ui label" htmlFor="email">
-                        email
-                      </label>
-                      <Field
-                        name="email"
-                        type="text"
-                        className={`${
-                          errors.email && touched.email
-                        } ? is-invalid : ''`}
-                      />
-                      <ErrorMessage
-                        style={{ color: "red" }}
-                        name="email"
-                        component="div"
-                        className="ui pointing label invalid-feedback"
-                      />
+                  <div className="ui middle aligned center aligned grid">
+                    <div className="column">
+                      <h2 className="ui teal image header">
+                        Login to your account
+                      </h2>
+                      <p style={{ color: "red" }}>{msg}</p>
+                      <Form className="ui large form">
+                        <div className="ui stacked segment">
+                          <div className="field">
+                            <div className="ui left icon input">
+                              <i className="user icon"></i>
+                              <Field
+                                type="email"
+                                name="email"
+                                placeholder="Enter Email"
+                                className={`${
+                                  errors.email && touched.email
+                                } ? is-invalid : ''`}
+                              />
+                            </div>
+                            <ErrorMessage
+                              style={{ color: "red" }}
+                              name="email"
+                              component="div"
+                              className="ui pointing label invalid-feedback"
+                            />
+                          </div>
+                          <div className="field">
+                            <div className="ui left icon input">
+                              <i className="lock icon"></i>
+                              <Field
+                                type="password"
+                                name="password"
+                                placeholder="password"
+                                className={`${
+                                  errors.password && touched.password
+                                } ? is-invalid : ''`}
+                              />
+                            </div>
+                            <ErrorMessage
+                              style={{ color: "red" }}
+                              name="password"
+                              component="div"
+                              className="ui pointing label invalid-feedback"
+                            />
+                          </div>
+                          <Field
+                            className="ui fluid large teal submit button"
+                            type="submit"
+                            name="Login"
+                            value="Login"
+                          />
+                        </div>
+                      </Form>
+                      <div className="ui message">
+                        Don't have an account?
+                        <Link to="/register">Register</Link>
+                      </div>
                     </div>
-                    <div className="field">
-                      <label className="ui label" htmlFor="password">
-                        password
-                      </label>
-                      <Field
-                        name="password"
-                        type="password"
-                        className={`${
-                          errors.password && touched.password
-                        } ? is-invalid : ''`}
-                      />
-                      <ErrorMessage
-                        style={{ color: "red" }}
-                        name="password"
-                        component="div"
-                        className="ui pointing label invalid-feedback"
-                      />
-                    </div>
-                    <button className="ui button" type="submit">
-                      Login
-                    </button>
-                  </Form>
+                  </div>
                 )}
               />
-              <p>
-                Don't have an account? <Link to="/register">Register</Link>
-              </p>
             </div>
           );
         }

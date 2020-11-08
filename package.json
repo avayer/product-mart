@@ -7,8 +7,11 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
     "axios": "^0.21.0",
     "chart.js": "^2.9.4",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.1",
     "formik": "^2.2.1",
     "lodash": "^4.17.20",
     "react": "^17.0.1",
@@ -22,6 +25,11 @@
     "semantic-ui-react": "^2.0.1",
     "web-vitals": "^0.2.4",
     "yup": "^0.29.3"
+  },
+  "jest": {
+    "snapShotSerializer": [
+      "enzyme-to-json/serializers"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",

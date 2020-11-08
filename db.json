@@ -7,7 +7,7 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 87,
+      "count": 89,
       "userId": 2,
       "rating": 4.3
     },
@@ -50,7 +50,7 @@
       "quantity": "1",
       "price": "49000",
       "id": 13,
-      "count": 19,
+      "count": 20,
       "userId": 7
     },
     {
@@ -93,7 +93,7 @@
       "quantity": "1",
       "price": "100000",
       "id": 17,
-      "count": 4,
+      "count": 5,
       "userId": 7,
       "rating": 2
     },
@@ -114,7 +114,7 @@
       "manufacturer": "Bajaj",
       "quantity": "11231",
       "price": "121",
-      "count": 3,
+      "count": 5,
       "userId": 7,
       "rating": 2,
       "id": 19
@@ -223,6 +223,17 @@
       "mobileNumber": "9999900000",
       "cart": [],
       "id": 9
+    },
+    {
+      "firstName": "Sai Anurag",
+      "lastName": "Mahankali",
+      "email": "anuragmahankali1998@gmail.com",
+      "username": "msa06",
+      "password": "anurag",
+      "location": "Hydearabad",
+      "mobileNumber": "9100910091",
+      "cart": [],
+      "id": 10
     }
   ]
 }

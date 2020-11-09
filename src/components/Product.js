@@ -19,7 +19,7 @@ const Product = (props) => {
     }
 
     const extra = (
-      <Button animated onClick={() => onViewClick(props.product)}>
+      <Button onClick={() => onViewClick(props.product)}>
           <Link
             to={{
               pathname: "/products/" + productName,
@@ -28,7 +28,7 @@ const Product = (props) => {
               },
             }}
           >
-            View
+          View
           </Link>
       </Button>
     );

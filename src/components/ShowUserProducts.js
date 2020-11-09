@@ -20,7 +20,7 @@ const ShowUserProducts = (props) => {
 
         return (
           <Item>
-            <Item.Image src="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-React/master/docs/public/images/image-16by9.png" />
+            <Item.Image size="small" src="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-React/master/docs/public/images/wireframe/image.png" />
             <Item.Content>
               <Item.Header as="a">Content Header</Item.Header>
               <Item.Meta>

@@ -4,6 +4,7 @@ import { Container, Item } from "semantic-ui-react";
 
 import { fetchProducts } from "../actions";
 import ShowUserProducts from './ShowUserProducts';
+import NavbarComponent from "./ui-components/NavbarComponent";
 
 class MyProducts extends React.Component {
 
@@ -15,11 +16,14 @@ class MyProducts extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Item.Group divided>
-          <ShowUserProducts products={this.props.products} />
-        </Item.Group>
-      </Container>
+      <div>
+      <NavbarComponent />
+        <Container>
+          <Item.Group divided>
+            <ShowUserProducts products={this.props.products} />
+          </Item.Group>
+        </Container>
+      </div>
     );
   }
 }

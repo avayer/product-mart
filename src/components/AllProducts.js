@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchProducts } from '../actions';
 import ProductsList from './ProductsList';
 import SearchField from './SearchField';
+import NavbarComponent from "./ui-components/NavbarComponent";
 
 class AllProducts extends React.Component {
 
@@ -13,7 +14,7 @@ class AllProducts extends React.Component {
         console.log(term)
         if(term !== '') {
             let searchResults = this.props.products.filter((product) => {
-                return product.productName.toLowerCase().includes(term.toLowerCase());
+                return product.productName.toLowerCase().startsWith(term.toLowerCase());
             });
             console.log(searchResults);
 
@@ -36,9 +37,10 @@ class AllProducts extends React.Component {
     render () {
         return (
             <div>
+            <NavbarComponent />
                 <SearchField onTermSubmit={this.onSearchSubmit} />
-                <p>{this.state.msg}</p>
-                <ProductsList products={this.props.products} />
+                <p style={{'textAlign': 'center', 'marginTop': '10px'}}>{this.state.msg}</p>
+                <ProductsList products={this.state.products} />
                 <br/>
             </div>
         );

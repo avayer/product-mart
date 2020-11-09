@@ -7,7 +7,7 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 89,
+      "count": 92,
       "userId": 2,
       "rating": 4.3
     },
@@ -18,7 +18,7 @@
       "quantity": "1",
       "price": "69000",
       "id": 10,
-      "count": 40,
+      "count": 41,
       "userId": 7,
       "rating": 3.3
     },
@@ -29,8 +29,9 @@
       "quantity": "1",
       "price": "70001",
       "id": 11,
-      "count": 20,
-      "userId": 7
+      "count": 23,
+      "userId": 7,
+      "rating": 4
     },
     {
       "productName": "HP 15s Core i3 10th Gen",
@@ -51,7 +52,8 @@
       "price": "49000",
       "id": 13,
       "count": 20,
-      "userId": 7
+      "userId": 7,
+      "rating": 2.3
     },
     {
       "productName": "Apple MacBook Air Core i5",
@@ -93,7 +95,7 @@
       "quantity": "1",
       "price": "100000",
       "id": 17,
-      "count": 5,
+      "count": 6,
       "userId": 7,
       "rating": 2
     },
@@ -118,6 +120,38 @@
       "userId": 7,
       "rating": 2,
       "id": 19
+    },
+    {
+      "productName": "Symphony Air cooler",
+      "productDesc": "Swinging Air Cooler with controla",
+      "manufacturer": "Symphony",
+      "quantity": "12",
+      "price": "1231121",
+      "id": 20,
+      "count": 1,
+      "userId": 7
+    },
+    {
+      "productName": "p1",
+      "productDesc": "p1",
+      "manufacturer": "p1",
+      "quantity": "2122",
+      "price": "1212",
+      "count": 0,
+      "userId": 7,
+      "rating": 0,
+      "id": 21
+    },
+    {
+      "productName": "p2",
+      "productDesc": "p2",
+      "manufacturer": "p2",
+      "quantity": "121",
+      "price": "1231",
+      "count": 0,
+      "userId": 7,
+      "rating": 0,
+      "id": 22
     }
   ],
   "users": [

@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { addProduct } from '../actions';
+import NavbarComponent from "./ui-components/NavbarComponent";
 
 const AddProduct = (props) => {
     let history = useHistory();
@@ -15,74 +16,172 @@ const AddProduct = (props) => {
 
     const style = {
         width:"40%",
-        margin:"5px",
-        border: "1px solid grey",
-        padding: "5px",
-        borderRadius: "5px"
+        margin:"0 auto"
     }
 
     return (
-        <Formik 
-            initialValues = {{
-                productName: '',
-                productDesc: '',
-                manufacturer: '',
-                quantity: '',
-                price: ''
+      <div>
+      <NavbarComponent />
+        <div style={style}>
+          <Formik
+            initialValues={{
+              productName: "",
+              productDesc: "",
+              manufacturer: "",
+              quantity: "",
+              price: "",
             }}
-
-            validationSchema = {Yup.object().shape({
-                productName: Yup.string().required('Product name cannot be blank'),
-                productDesc: Yup.string().required('Product description cannot be blank'),
-                manufacturer: Yup.string().required('Product manufacturer cannot be blank'),
-                quantity: Yup.number()
-                            .min(1, 'Quantity should be atleast 1')
-                            .required('Quantity cannot be blank')
-                            .typeError('Must be a number'),
-                price: Yup.number('Must be a number')
-                        .required('Price cannot be blank')
-                        .min(1, 'Should be greater than zero')
-                        .typeError('Must be a number')
+            validationSchema={Yup.object().shape({
+              productName: Yup.string().required(
+                "Product name cannot be blank"
+              ),
+              productDesc: Yup.string().required(
+                "Product description cannot be blank"
+              ),
+              manufacturer: Yup.string().required(
+                "Product manufacturer cannot be blank"
+              ),
+              quantity: Yup.number()
+                .min(1, "Quantity should be atleast 1")
+                .required("Quantity cannot be blank")
+                .typeError("Must be a number"),
+              price: Yup.number("Must be a number")
+                .required("Price cannot be blank")
+                .min(1, "Should be greater than zero")
+                .typeError("Must be a number"),
             })}
-
-            onSubmit = { fields => {
-                //POST  call goes here
-                const id = parseInt(localStorage.getItem('id'));
-                const rating = Math.floor(Math.random() * (5 - 0)) + 0;
-                props.addProduct({ ...fields, count: 0, userId: id, rating: rating });
-                history.push('/myproducts')
+            onSubmit={(fields) => {
+              //POST  call goes here
+              const id = parseInt(localStorage.getItem("id"));
+              const rating = Math.floor(Math.random() * (5 - 0)) + 0;
+              props.addProduct({
+                ...fields,
+                count: 0,
+                userId: id,
+                rating: rating,
+              });
+              history.push("/myproducts");
             }}
-            render = {( {errors, status, touched} ) => (
-                <Form className="ui fluid form" style={style}>
-                    <div className="field">
-                        <label className="ui label" htmlFor="productName">Product Name</label>
-                        <Field name="productName" type="text" className={`${errors.productName && touched.productName} ? is-invalid : ''`} />
-                        <ErrorMessage style={{color:"red"}} name="productName" component="div" className="ui pointing label invalid-feedback" />
+            render={({ errors, status, touched }) => (
+              <div className="ui middle aligned center aligned grid">
+                <div className="column">
+                  <h2 className="ui teal image header">
+                    Product Data - Add product
+                  </h2>
+
+                  <Form className="ui large form">
+                    <div className="ui stacked segment">
+                      <div>
+                        <div className="field">
+                          <div className="ui left icon input">
+                            <i class="suitcase icon"></i>
+                            <Field
+                              name="productName"
+                              type="text"
+                              placeholder="ProductName"
+                              className={`${
+                                errors.productName && touched.productName
+                              } ? is-invalid : ''`}
+                            />
+                          </div>
+                          <ErrorMessage
+                            style={{ color: "red" }}
+                            name="productName"
+                            component="div"
+                            className="ui pointing label invalid-feedback"
+                          />
+                        </div>
+                        <div className="field">
+                          <div className="ui left icon input">
+                            <i class="file alternate icon"></i>
+                            <Field
+                              name="productDesc"
+                              type="textarea"
+                              placeholder="ProductDesc"
+                              className={`${
+                                errors.productDesc && touched.productDesc
+                              } ? is-invalid : ''`}
+                            />
+                          </div>
+                          <ErrorMessage
+                            style={{ color: "red" }}
+                            name="productDesc"
+                            component="div"
+                            className="ui pointing label invalid-feedback"
+                          />
+                        </div>
+                      </div>
+                      <div className="field">
+                        <div className="ui left icon input">
+                          <i class="industry icon"></i>
+                          <Field
+                            name="manufacturer"
+                            type="text"
+                            placeholder="manufacturer"
+                            className={`${
+                              errors.manufacturer && touched.manufacturer
+                            } ? is-invalid : ''`}
+                          />
+                        </div>
+                        <ErrorMessage
+                          style={{ color: "red" }}
+                          name="manufacturer"
+                          component="div"
+                          className="ui pointing label invalid-feedback"
+                        />
+                      </div>
+                      <div className="field">
+                        <div className="ui left icon input">
+                          <i class="hashtag icon"></i>
+                          <Field
+                            name="quantity"
+                            type="text"
+                            placeholder="Quantity"
+                            className={`${
+                              errors.quantity && touched.quantity
+                            } ? is-invalid : ''`}
+                          />
+                        </div>
+                        <ErrorMessage
+                          style={{ color: "red" }}
+                          name="quantity"
+                          component="div"
+                          className="ui pointing label invalid-feedback"
+                        />
+                      </div>
+                      <div className="field">
+                        <div className="ui left icon input">
+                          <i class="rupee sign icon"></i>
+                          <Field
+                            name="price"
+                            type="text"
+                            placeholder="Price"
+                            className={`${
+                              errors.price && touched.price
+                            } ? is-invalid : ''`}
+                          />
+                        </div>
+                        <ErrorMessage
+                          style={{ color: "red" }}
+                          name="price"
+                          component="div"
+                          className="ui pointing label invalid-feedback"
+                        />
+                      </div>
+                      <Field
+                        className="ui fluid large teal submit button"
+                        type="submit"
+                        name="Add Product"
+                        value="Add Product"
+                      />
                     </div>
-                    <div className="field">
-                        <label className="ui label" htmlFor="productDesc">product Description</label>
-                        <Field name="productDesc" type="textarea" className={`${errors.productDesc && touched.productDesc} ? is-invalid : ''`} />
-                        <ErrorMessage style={{color:"red"}} name="productDesc" component="div" className="ui pointing label invalid-feedback" />
-                    </div>                    
-                    <div className="field">
-                        <label className="ui label" htmlFor="manufacturer">Manufacturer</label>
-                        <Field name="manufacturer" type="text" className={`${errors.manufacturer && touched.manufacturer} ? is-invalid : ''`} />
-                        <ErrorMessage style={{color:"red"}} name="manufacturer" component="div" className="ui pointing label invalid-feedback" />
-                    </div>
-                    <div className="field">
-                        <label className="ui label" htmlFor="quantity">Quantity</label>
-                        <Field name="quantity" type="text" className={`${errors.quantity && touched.quantity} ? is-invalid : ''`} />
-                        <ErrorMessage style={{color:"red"}} name="quantity" component="div" className="ui pointing label invalid-feedback" />
-                    </div>
-                    <div className="field">
-                        <label className="ui label" htmlFor="price">price</label>
-                        <Field name="price" type="text" className={`${errors.price && touched.price} ? is-invalid : ''`} />
-                        <ErrorMessage style={{color:"red"}} name="price" component="div" className="ui pointing label invalid-feedback" />
-                    </div>
-                    <button className="ui button" type="submit">Add product</button>                                          
-                </Form>
+                  </Form>
+                </div>
+              </div>
             )}
-        />
+          />
+        </div>
+      </div>
     );
 }
 export default connect(null, { addProduct })(AddProduct);

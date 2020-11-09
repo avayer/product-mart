@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchProducts } from "../actions";
 import PieChart from './PieChart';
 import VerticalBarChart from './VerticalBarChart';
+import NavbarComponent from "./ui-components/NavbarComponent";
 
 const ProductStats = (props) => {
 
@@ -47,6 +48,7 @@ function handleChange(e) {
 
   return (
     <div>
+    <NavbarComponent />
       <select onChange={handleChange} name="charts">
         <option disabled selected>select a chart</option>
         <option value="bar">Bar chart</option>

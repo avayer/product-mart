@@ -7,6 +7,7 @@ import "./index.css";
 import store from './store';
 import App from './components/App'
 import "semantic-ui-css/semantic.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
     <BrowserRouter>

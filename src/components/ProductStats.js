@@ -7,7 +7,7 @@ import NavbarComponent from "./ui-components/NavbarComponent";
 
 const ProductStats = (props) => {
 
-  const [view, setView] = useState('');
+  const [view, setView] = useState('bar');
 
   useEffect(() => {
     props.fetchProducts();
@@ -15,21 +15,22 @@ const ProductStats = (props) => {
 
   let labelData = [];
   let values = [];
-  let colors = [];
+  let colors = [
+    "rgba(255, 99, 132)",
+    "rgba(54, 162, 235)",
+    "rgba(255, 206, 86)",
+    "rgba(75, 192, 192)",
+    "rgba(153, 102, 255)"
+  ];
 
-  props.products.forEach((product) => {
-    labelData.push(product.productName);
-    values.push(product.count);
-    colors.push(randomColor());
-    return;
-  });
+ const sortedProducts = props.products.sort(function (a, b) {
+   return b.count - a.count;
+ })
 
-  function randomColor() {
-    var r = Math.floor(Math.random() * 256);
-    var g = Math.floor(Math.random() * 256);
-    var b = Math.floor(Math.random() * 256);
-    return "rgb(" + r + ", " + g + ", " + b + ")";
-  }
+ sortedProducts.slice(0, 5).map((product)=>{
+   labelData.push(product.productName)
+   values.push(product.count)
+ })
 
 function content() {
     switch(view) {
@@ -49,9 +50,9 @@ function handleChange(e) {
   return (
     <div>
     <NavbarComponent />
-      <select onChange={handleChange} name="charts">
-        <option disabled selected>select a chart</option>
-        <option value="bar">Bar chart</option>
+      <select onChange={handleChange} name="charts" className="ui fluid dropdown"  style={{'marginTop': '5px', 'width': '40%'}}>
+        <option disabled>select a chart</option>
+        <option value="bar" defaultValue>Bar chart</option>
         <option value="pie">Pie Chart</option>
       </select>
       {content()}

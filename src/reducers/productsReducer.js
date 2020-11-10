@@ -14,7 +14,7 @@ const productsReducer = (state =[], action) => {
                 ...state.slice(index+1)
             ]
             return newState;
-        case 'DELETE_PRODUCT':
+        case 'DELETE_PRODUCT':  
             return state.filter(product=>product.id !== action.payload);
         case 'UPDATE_VIEW_COUNT':
             index = state.findIndex((product) => product.id === action.payload.id);

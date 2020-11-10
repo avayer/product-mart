@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 
 import Product from './Product';
 
@@ -10,9 +10,11 @@ const ProductsList = (props) => {
     })
 
     return (
-        <Grid columns={4} stackable style={{'marginLeft': '200px '}}>
-            {renderedProducts}
+      <Container>
+        <Grid centered columns={3} stackable>
+          {renderedProducts}
         </Grid>
+      </Container>
     );
 }
 

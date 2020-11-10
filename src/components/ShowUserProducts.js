@@ -20,24 +20,28 @@ const ShowUserProducts = (props) => {
 
         return (
           <Item>
-            <Item.Image size="small" src="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-React/master/docs/public/images/wireframe/image.png" />
+            <Item.Image
+              size="small"
+              src="https://raw.githubusercontent.com/Semantic-Org/Semantic-UI-React/master/docs/public/images/wireframe/image.png"
+            />
             <Item.Content>
-              <Item.Header as="a">Content Header</Item.Header>
+              <Item.Header as="a">{product.productName}</Item.Header>
               <Item.Meta>
-                <span>Date</span>
-                <span>Category</span>
+                <span>{product.manufacturer}</span>
               </Item.Meta>
-              <Item.Description>
-                A description which may flow for several lines and give context
-                to the content.
-              </Item.Description>
+              <Item.Description>{product.productDesc}</Item.Description>
               <Item.Extra>
-                <Image
-                  avatar
-                  circular
-                  src="/images/wireframe/square-image.png"
-                />
-                Username
+                {product.price}
+                <Link
+                  to={{
+                    pathname: "/products/" + product.productName,
+                    productProps: {
+                      ...product,
+                    },
+                  }}
+                >
+                  View
+                </Link>
               </Item.Extra>
             </Item.Content>
           </Item>

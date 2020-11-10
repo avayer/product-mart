@@ -35,7 +35,7 @@ const ProductDetail = (props) => {
         function onDeleteClick(id) {
           console.log(id)
             props.deleteProduct(id);
-            history.push("/myproducts");
+            history.push("/products");
         }
 
         function addproductToUserCart(userId, productId) {
@@ -43,10 +43,14 @@ const ProductDetail = (props) => {
           history.push('/');
         }
 
+        function showPrompt() {
+
+        }
+
         function showButtonsBasedOnAuth(userId) {
           const loggedUserId = parseInt(localStorage.getItem('id'));
           if (localStorage.getItem('id')!==null && loggedUserId === userId) {
-            return(
+            return (
               <div>
                 <button>
                   <Link
@@ -60,11 +64,20 @@ const ProductDetail = (props) => {
                     Edit
                   </Link>
                 </button>
-                <button onClick={() => onDeleteClick(id)}>Delete {productName}</button>
+                <button onClick={() => confirmDelete()}>
+                  Delete {productName}
+                </button>
               </div>
             );
           } else {
             return <div></div>
+          }
+        }
+
+        function confirmDelete() {
+          var result = window.confirm("Are you sure you want to delete?");
+          if (result) {
+            onDeleteClick(id);
           }
         }
 
@@ -159,10 +172,3 @@ const ProductDetail = (props) => {
 export default connect(null, { deleteProduct, addProductToCart })(
   ProductDetail
 );
-
-        // <p>{id}</p>
-        // <p></p>
-        // <p>{productDesc}</p>
-        // <p>{manufacturer}</p>
-        // <p>{quantity}</p>
-        // <p>{price}</p>

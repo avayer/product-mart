@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, Prompt, useHistory } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { connect } from 'react-redux';
@@ -59,7 +59,7 @@ const RegisterPage = (props) => {
           onSubmit={(fields) => {
             getUsers(checkUserAvailability, fields);
           }}
-          render={({ errors, status, touched }) => (
+          render={({ errors, dirty, touched }) => (
             <div>
               <div className="ui middle aligned center aligned grid">
                 <div className="column">
@@ -218,6 +218,10 @@ const RegisterPage = (props) => {
                   </div>
                 </div>
               </div>
+              <Prompt
+                when={dirty}
+                message="Are you sure you want to leave this page without registering??"
+              />
             </div>
           )}
         />

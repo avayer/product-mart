@@ -7,31 +7,9 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 92,
+      "count": 102,
       "userId": 2,
       "rating": 4.3
-    },
-    {
-      "productName": "MSI Alpha 15 Ryzen 7",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Dell",
-      "quantity": "1",
-      "price": "69000",
-      "id": 10,
-      "count": 41,
-      "userId": 7,
-      "rating": 3.3
-    },
-    {
-      "productName": "Apple MacBook Air Core i5",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Apple",
-      "quantity": "1",
-      "price": "70001",
-      "id": 11,
-      "count": 23,
-      "userId": 7,
-      "rating": 4
     },
     {
       "productName": "HP 15s Core i3 10th Gen",
@@ -40,31 +18,9 @@
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 12,
+      "count": 16,
       "userId": 7,
       "rating": 4.3
-    },
-    {
-      "productName": "HP 15s Core i5 10th Gen",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Hewlett Pacakrd",
-      "quantity": "1",
-      "price": "49000",
-      "id": 13,
-      "count": 20,
-      "userId": 7,
-      "rating": 2.3
-    },
-    {
-      "productName": "Apple MacBook Air Core i5",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Apple",
-      "quantity": "1",
-      "price": "70000",
-      "id": 14,
-      "count": 9,
-      "userId": 7,
-      "rating": 4.8
     },
     {
       "productName": "Dell Vostro Core i3 10th Gen",
@@ -84,20 +40,9 @@
       "quantity": "1",
       "price": "100000",
       "id": 16,
-      "count": 11,
+      "count": 12,
       "userId": 7,
       "rating": 4
-    },
-    {
-      "productName": "Asus VivoBook 15 Core i3",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Microsoft",
-      "quantity": "1",
-      "price": "100000",
-      "id": 17,
-      "count": 6,
-      "userId": 7,
-      "rating": 2
     },
     {
       "productName": "Motorola One Power",
@@ -116,7 +61,7 @@
       "manufacturer": "Bajaj",
       "quantity": "11231",
       "price": "121",
-      "count": 5,
+      "count": 10,
       "userId": 7,
       "rating": 2,
       "id": 19
@@ -128,7 +73,7 @@
       "quantity": "12",
       "price": "1231121",
       "id": 20,
-      "count": 1,
+      "count": 2,
       "userId": 7
     },
     {
@@ -148,7 +93,7 @@
       "manufacturer": "p2",
       "quantity": "121",
       "price": "1231",
-      "count": 0,
+      "count": 1,
       "userId": 7,
       "rating": 0,
       "id": 22
@@ -234,7 +179,9 @@
       "location": "new",
       "mobileNumber": "new",
       "id": 7,
-      "cart": []
+      "cart": [
+        10
+      ]
     },
     {
       "firstName": "Raman",
@@ -268,6 +215,28 @@
       "mobileNumber": "9100910091",
       "cart": [],
       "id": 10
+    },
+    {
+      "firstName": "new",
+      "lastName": "new",
+      "email": "new1@new.com",
+      "username": "new",
+      "password": "new",
+      "location": "new",
+      "mobileNumber": "101010101",
+      "cart": [],
+      "id": 11
+    },
+    {
+      "firstName": "coldflamer",
+      "lastName": "player",
+      "email": "coldflamer@gmail.com",
+      "username": "coldflamer",
+      "password": "coldflamer",
+      "location": "India",
+      "mobileNumber": "919191919",
+      "cart": [],
+      "id": 12
     }
   ]
 }

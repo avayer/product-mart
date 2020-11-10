@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from "react-router-dom";
+import { useHistory, Prompt } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { addProduct } from '../actions';
@@ -21,7 +21,7 @@ const AddProduct = (props) => {
 
     return (
       <div>
-      <NavbarComponent />
+        <NavbarComponent />
         <div style={style}>
           <Formik
             initialValues={{
@@ -62,7 +62,7 @@ const AddProduct = (props) => {
               });
               history.push("/myproducts");
             }}
-            render={({ errors, status, touched }) => (
+            render={({ errors, dirty, touched }) => (
               <div className="ui middle aligned center aligned grid">
                 <div className="column">
                   <h2 className="ui teal image header">
@@ -177,6 +177,7 @@ const AddProduct = (props) => {
                     </div>
                   </Form>
                 </div>
+                <Prompt when={dirty} message="Are you sure you want to leave this page without submitting data??" />
               </div>
             )}
           />

@@ -11,6 +11,7 @@ import MyProducts from "./MyProducts";
 import ProfilePage from './ProfilePage';
 import Cart from './Cart';
 import Spinner from './ui-components/Spinner';
+import { Container } from 'semantic-ui-react';
 
 const AllProducts = lazy(()=>import('./AllProducts'));
 const LoginPage = lazy(()=>import('./LoginPage'));
@@ -19,7 +20,7 @@ const RegisterPage = lazy(()=>import('./RegisterPage'));
 const App = () => {
 
     return (
-      <div>
+      <Container>
         <Suspense fallback={<div><Spinner /></div>}>
           <Switch>
             <Route exact path="/" component={Landing} />
@@ -54,7 +55,7 @@ const App = () => {
             <Route component={NoPageFound} />
           </Switch>
         </Suspense>
-      </div>
+      </Container>
     );
 }
 

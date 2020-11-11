@@ -7,7 +7,7 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 102,
+      "count": 103,
       "userId": 2,
       "rating": 4.3
     },
@@ -18,23 +18,23 @@
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 16,
+      "count": 20,
       "userId": 7,
       "rating": 4.3
     },
     {
-      "productName": "Dell Vostro Core i3 10th Gen",
+      "productName": "Dell Vostro Core i3",
       "productDesc": "Gaming Laptop",
       "manufacturer": "Dell",
       "quantity": "1",
       "price": "37000",
       "id": 15,
-      "count": 8,
+      "count": 9,
       "userId": 7,
       "rating": 3
     },
     {
-      "productName": "Microsoft Surface Pro Core i5",
+      "productName": "Microsoft Surface Pro i5",
       "productDesc": "Gaming Laptop",
       "manufacturer": "Microsoft",
       "quantity": "1",
@@ -50,21 +50,20 @@
       "manufacturer": "Motorola",
       "quantity": "10",
       "price": "101010",
-      "count": 3,
+      "count": 4,
       "userId": 7,
       "id": 18,
       "rating": 4.8
     },
     {
       "productName": "Bajaj Fan",
-      "productDesc": "Nice fan",
+      "productDesc": "Nice cool fan",
       "manufacturer": "Bajaj",
       "quantity": "11231",
-      "price": "121",
-      "count": 10,
-      "userId": 7,
-      "rating": 2,
-      "id": 19
+      "price": "121111",
+      "id": 19,
+      "count": 11,
+      "userId": 7
     },
     {
       "productName": "Symphony Air cooler",
@@ -75,17 +74,6 @@
       "id": 20,
       "count": 2,
       "userId": 7
-    },
-    {
-      "productName": "p1",
-      "productDesc": "p1",
-      "manufacturer": "p1",
-      "quantity": "2122",
-      "price": "1212",
-      "count": 0,
-      "userId": 7,
-      "rating": 0,
-      "id": 21
     },
     {
       "productName": "p2",

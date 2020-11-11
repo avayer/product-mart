@@ -1,13 +1,12 @@
 import React from 'react';
 import { useHistory, Link } from "react-router-dom";
-import { Navbar, Nav, Button, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import './NavbarComponent.css';
 
 const NavbarComponent = () => {
 
   let history = useHistory();
-
   const renderAuthButton = () => {
     if (localStorage.getItem("username") === null) {
       return (

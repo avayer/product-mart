@@ -43,10 +43,6 @@ const ProductDetail = (props) => {
           history.push('/');
         }
 
-        function showPrompt() {
-
-        }
-
         function showButtonsBasedOnAuth(userId) {
           const loggedUserId = parseInt(localStorage.getItem('id'));
           if (localStorage.getItem('id')!==null && loggedUserId === userId) {
@@ -118,10 +114,13 @@ const ProductDetail = (props) => {
           setpmanuf(!pmanuf)
         }
         function changepdesc() {
-          setpdesc(!pdesc)
+          setpdesc(!pdesc);
         }
         function changeprating() {
-          setprating(!prating)
+          setprating(!prating);
+        }
+        function changepquan() {
+          setpquan(!pquan)
         }
 
     return (
@@ -156,6 +155,14 @@ const ProductDetail = (props) => {
             onChange={changeprating}
           />
           <label htmlFor="box-3"> Rating</label>
+
+          <input
+            type="checkbox"
+            id="box-3"
+            checked={pquan}
+            onChange={changepquan}
+          />
+          <label htmlFor="box-3"> quantity</label>
         </div>
         {disyplayName}
         {disyplayManufacturer}

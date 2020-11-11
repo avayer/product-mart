@@ -18,11 +18,9 @@ class MyProducts extends React.Component {
     return (
       <div>
       <NavbarComponent />
-        <Container>
-          <Item.Group divided>
+        <div className="container">
             <ShowUserProducts products={this.props.products} />
-          </Item.Group>
-        </Container>
+        </div>
       </div>
     );
   }

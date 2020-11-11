@@ -62,7 +62,7 @@ const RegisterPage = (props) => {
           render={({ errors, dirty, touched }) => (
             <div>
               <div className="ui middle aligned center aligned grid">
-                <div className="column">
+                <div className="column" style={{ marginTop: "10%" }}>
                   <h2 className="ui teal image header">
                     Register your Account
                   </h2>
@@ -218,10 +218,7 @@ const RegisterPage = (props) => {
                   </div>
                 </div>
               </div>
-              <Prompt
-                when={dirty}
-                message="Are you sure you want to leave this page without registering??"
-              />
+              <Prompt when={dirty} message="Are you sure??" />
             </div>
           )}
         />

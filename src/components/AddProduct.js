@@ -64,7 +64,7 @@ const AddProduct = (props) => {
             }}
             render={({ errors, dirty, touched }) => (
               <div className="ui middle aligned center aligned grid">
-                <div className="column">
+                <div className="column" style={{ marginTop: "10%" }}>
                   <h2 className="ui teal image header">
                     Product Data - Add product
                   </h2>
@@ -177,7 +177,7 @@ const AddProduct = (props) => {
                     </div>
                   </Form>
                 </div>
-                <Prompt when={dirty} message="Are you sure you want to leave this page without submitting data??" />
+                <Prompt when={dirty} message="Are you sure??" />
               </div>
             )}
           />

@@ -27,7 +27,7 @@ const ProfilePage = (props) => {
     <div>
       <NavbarComponent />
       <div className="ui middle aligned grid" style={style}>
-        <div className="column">
+        <div className="column" style={{ marginTop: "10%" }}>
           <button className="ui fluid large teal submit button" disabled>
             Profile
           </button>

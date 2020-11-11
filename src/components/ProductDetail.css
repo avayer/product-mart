@@ -1,0 +1,15 @@
+.boxes {
+    margin: 10px;
+    background:rgba(240, 240, 240, 0.7);
+    padding-left: 20px;
+}
+
+.productCard {
+    margin: 10px;
+    background: rgba(240, 240, 240, 0.7);
+    padding: 5px;
+}
+
+.btn {
+    margin: 5px;
+}

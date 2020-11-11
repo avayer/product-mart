@@ -4,6 +4,7 @@ import { useHistory, Link } from 'react-router-dom';
 
 import { deleteProduct } from "../actions";
 import { addProductToCart } from '../actions/userActions';
+import NavbarComponent from './ui-components/NavbarComponent';
 
 import './ProductDetail.css';
 
@@ -48,7 +49,7 @@ const ProductDetail = (props) => {
           if (localStorage.getItem('id')!==null && loggedUserId === userId) {
             return (
               <div>
-                <button>
+                <button className="btn btn-warning">
                   <Link
                     to={{
                       pathname: "/products/edit",
@@ -60,7 +61,7 @@ const ProductDetail = (props) => {
                     Edit
                   </Link>
                 </button>
-                <button onClick={() => confirmDelete()}>
+                <button className="btn btn-danger" onClick={() => confirmDelete()}>
                   Delete {productName}
                 </button>
               </div>
@@ -80,7 +81,7 @@ const ProductDetail = (props) => {
         function showAddCartButton() {
           if(localStorage.getItem('id')!==null) {
             return (
-              <button
+              <button className="btn btn-success"
                 onClick={() =>
                   addproductToUserCart(parseInt(localStorage.getItem('id')), id)
                 }
@@ -95,19 +96,19 @@ const ProductDetail = (props) => {
             pname ? <div>{productName}</div> : null
         );
         const disyplayDesc = (
-            pdesc ? <div>{productDesc}</div> : null
+            pdesc ? <div>Description:{productDesc}</div> : null
         );
         const disyplayPrice = (
-            pprice ? <div>{price}</div> : null
+            pprice ? <div>Rs:{price}</div> : null
         );
         const disyplayManufacturer = (
-            pmanuf ? <div>{manufacturer}</div> : null
+            pmanuf ? <div>Company: {manufacturer}</div> : null
         );
         const disyplayQuantity = (
-            pquan ? <div>{quantity}</div> : null
+            pquan ? <div>In Stock: {quantity}</div> : null
         );
         const disyplayRating = (
-            prating ? <div>{rating}</div> : null
+            prating ? <div>Rating: {rating}</div> : null
         );
 
         function changepmanuf() {
@@ -125,53 +126,64 @@ const ProductDetail = (props) => {
 
     return (
       <div>
-        <div className="boxes">
-          <input type="checkbox" id="box-1" checked={pname} disabled />
-          <label htmlFor="box-1"> Product name</label>
-
-          <input type="checkbox" id="box-2" checked={pprice} disabled />
-          <label htmlFor="box-2"> Price</label>
-
-          <input
-            type="checkbox"
-            id="box-3"
-            checked={pmanuf}
-            onChange={changepmanuf}
-          />
-          <label htmlFor="box-3"> Manufacturer</label>
-
-          <input
-            type="checkbox"
-            id="box-3"
-            checked={pdesc}
-            onChange={changepdesc}
-          />
-          <label htmlFor="box-3"> Description</label>
-
-          <input
-            type="checkbox"
-            id="box-3"
-            checked={prating}
-            onChange={changeprating}
-          />
-          <label htmlFor="box-3"> Rating</label>
-
-          <input
-            type="checkbox"
-            id="box-3"
-            checked={pquan}
-            onChange={changepquan}
-          />
-          <label htmlFor="box-3"> quantity</label>
+        <NavbarComponent />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-lg-4">
+              <div className="boxes">
+                <input type="checkbox" id="box-1" checked={pname} disabled />
+                <label htmlFor="box-1"> Product name</label>
+                <br />
+                <input type="checkbox" id="box-2" checked={pprice} disabled />
+                <label htmlFor="box-2"> Price</label>
+                <br />
+                <input
+                  type="checkbox"
+                  id="box-3"
+                  checked={pmanuf}
+                  onChange={changepmanuf}
+                />
+                <label htmlFor="box-3"> Manufacturer</label>
+                <br />
+                <input
+                  type="checkbox"
+                  id="box-3"
+                  checked={pdesc}
+                  onChange={changepdesc}
+                />
+                <label htmlFor="box-3"> Description</label>
+                <br />
+                <input
+                  type="checkbox"
+                  id="box-3"
+                  checked={prating}
+                  onChange={changeprating}
+                />
+                <label htmlFor="box-3"> Rating</label>
+                <br />
+                <input
+                  type="checkbox"
+                  id="box-3"
+                  checked={pquan}
+                  onChange={changepquan}
+                />
+                <label htmlFor="box-3"> quantity</label>
+              </div>
+            </div>
+            <div className="col-sm-12 col-lg-6">
+              <div className="productCard">
+                {disyplayName}
+                {disyplayManufacturer}
+                {disyplayDesc}
+                {disyplayRating}
+                {disyplayPrice}
+                {disyplayQuantity}
+                {showButtonsBasedOnAuth(userId)}
+                {showAddCartButton()}
+              </div>
+            </div>
+          </div>
         </div>
-        {disyplayName}
-        {disyplayManufacturer}
-        {disyplayDesc}
-        {disyplayRating}
-        {disyplayPrice}
-        {disyplayQuantity}
-        {showButtonsBasedOnAuth(userId)}
-        {showAddCartButton()}
       </div>
     );
 }

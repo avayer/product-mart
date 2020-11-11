@@ -18,7 +18,7 @@ const ShowUserProducts = (props) => {
     function onDeleteClick(id) {
       console.log(id);
       props.deleteProduct(id);
-      history.push("/products");
+      history.push("/myproducts");
     }
 
     function confirmDelete(id) {

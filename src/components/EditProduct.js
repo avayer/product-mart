@@ -162,7 +162,7 @@ const EditProduct = (props) => {
               </Form>
               <Prompt
                 when={dirty}
-                message="Are you sure you want to leave this page without submitting data??"
+                message="Are you sure??"
               />
             </div>
           )}

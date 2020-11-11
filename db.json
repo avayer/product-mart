@@ -7,20 +7,19 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 103,
+      "count": 104,
       "userId": 2,
       "rating": 4.3
     },
     {
       "productName": "HP 15s Core i3 10th Gen",
-      "productDesc": "Gaming Laptop",
+      "productDesc": "Gaming Laptops",
       "manufacturer": "Hp",
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 20,
-      "userId": 7,
-      "rating": 4.3
+      "count": 35,
+      "userId": 7
     },
     {
       "productName": "Dell Vostro Core i3",
@@ -29,7 +28,7 @@
       "quantity": "1",
       "price": "37000",
       "id": 15,
-      "count": 9,
+      "count": 13,
       "userId": 7,
       "rating": 3
     },
@@ -38,11 +37,10 @@
       "productDesc": "Gaming Laptop",
       "manufacturer": "Microsoft",
       "quantity": "1",
-      "price": "100000",
+      "price": "1000001",
       "id": 16,
-      "count": 12,
-      "userId": 7,
-      "rating": 4
+      "count": 16,
+      "userId": 7
     },
     {
       "productName": "Motorola One Power",
@@ -66,25 +64,26 @@
       "userId": 7
     },
     {
-      "productName": "Symphony Air cooler",
-      "productDesc": "Swinging Air Cooler with controla",
-      "manufacturer": "Symphony",
-      "quantity": "12",
-      "price": "1231121",
-      "id": 20,
-      "count": 2,
-      "userId": 7
+      "productName": "Shurikens",
+      "productDesc": "Ninja tools | Weapon",
+      "manufacturer": "Konaha tools",
+      "quantity": "12903",
+      "price": "2093",
+      "count": 0,
+      "userId": 13,
+      "rating": 1,
+      "id": 20
     },
     {
-      "productName": "p2",
-      "productDesc": "p2",
-      "manufacturer": "p2",
-      "quantity": "121",
-      "price": "1231",
-      "count": 1,
-      "userId": 7,
-      "rating": 0,
-      "id": 22
+      "productName": "kunai",
+      "productDesc": "Ninja tools",
+      "manufacturer": "self",
+      "quantity": "21",
+      "price": "121",
+      "count": 0,
+      "userId": 15,
+      "rating": 3,
+      "id": 21
     }
   ],
   "users": [
@@ -225,6 +224,39 @@
       "mobileNumber": "919191919",
       "cart": [],
       "id": 12
+    },
+    {
+      "firstName": "Naruto",
+      "lastName": "Uzumaki",
+      "email": "naruto@konaha.com",
+      "username": "naruto",
+      "password": "naruto",
+      "location": "Konaha",
+      "mobileNumber": "1111111",
+      "cart": [],
+      "id": 13
+    },
+    {
+      "firstName": "Sasuke",
+      "lastName": "Uchiha",
+      "email": "sasuke@konaha.com",
+      "username": "sasuke",
+      "password": "sasuke",
+      "location": "Konaha",
+      "mobileNumber": "22222",
+      "cart": [],
+      "id": 14
+    },
+    {
+      "firstName": "Kakashi",
+      "lastName": "Hatake",
+      "email": "kakashi@konaha.com",
+      "username": "kakashi",
+      "password": "kakashi",
+      "location": "konaha",
+      "mobileNumber": "33333333",
+      "cart": [],
+      "id": 15
     }
   ]
 }

@@ -28,8 +28,8 @@
     "web-vitals": "^0.2.4",
     "yup": "^0.29.3"
   },
-  "jest": {
-    "snapShotSerializers": [
+ "jest": {
+    "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
   },

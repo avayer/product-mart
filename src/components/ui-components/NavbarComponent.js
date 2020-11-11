@@ -11,8 +11,10 @@ const NavbarComponent = () => {
     if (localStorage.getItem("username") === null) {
       return (
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand className="brand-link">
-            <Link to="/">Product Mart</Link>
+          <Navbar.Brand>
+            <Link to="/" className="brand-name">
+              Product Mart
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -33,8 +35,10 @@ const NavbarComponent = () => {
     } else {
       return (
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand className="brand-link">
-            <Link to="/">Product Mart</Link>
+          <Navbar.Brand>
+            <Link to="/" className="brand-name">
+              Product Mart
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

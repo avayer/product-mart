@@ -9,9 +9,10 @@ const Product = (props) => {
 
    const {
      productName,
-     productDesc,
      manufacturer,
      price,
+     rating,
+     quantity,
    } = props.product;
 
     const onViewClick = (product) => {
@@ -33,18 +34,43 @@ const Product = (props) => {
       </Button>
     );
     
+    const disyplayManufacturer = props.showManuf ? (
+      <li class="list-group-item">Company: {manufacturer}</li>
+    ) : null;
+    const disyplayQuantity = props.showQuan ? (
+      <li class="list-group-item">In Stock: {quantity}</li>
+    ) : null;
+    const disyplayRating = props.showRating ? (<li class="list-group-item">Rating: {rating}</li> ): null;
 
     return (
       <Grid.Column>
-        <Card
-          image="https://via.placeholder.com/150"
-          header={productName}
-          meta={manufacturer}
-          description={`Rs ${price}`}
-          extra={extra}
-        />
+        <div class="card" style={{ width: "18rem" }}>
+          <img
+            class="card-img-top"
+            src="https://via.placeholder.com/150"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{productName}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            {disyplayManufacturer}
+            {disyplayRating}
+            {disyplayQuantity}
+            <li class="list-group-item">Rs: {price}</li>
+          </ul>
+          <div class="card-body">{extra}</div>
+        </div>
       </Grid.Column>
     );
 }
 
 export default connect(null, { updateViewCount })(Product);
+
+        // <Card
+        //   image="https://via.placeholder.com/150"
+        //   header={productName}
+        //   meta={manufacturer}
+        //   description={`Rs ${price}`}
+        //   extra={extra}
+        // />;

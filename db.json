@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "productName": "MSI GF63 Thin Core i7 9th Gen",
+      "productName": "MSI GF63 Thin Core i7",
       "productDesc": "Gaming Laptop",
       "manufacturer": "Intel",
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 104,
+      "count": 106,
       "userId": 2,
       "rating": 4.3
     },
@@ -18,8 +18,9 @@
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 35,
-      "userId": 7
+      "count": 37,
+      "userId": 7,
+      "rating": 4
     },
     {
       "productName": "Dell Vostro Core i3",
@@ -28,7 +29,7 @@
       "quantity": "1",
       "price": "37000",
       "id": 15,
-      "count": 13,
+      "count": 16,
       "userId": 7,
       "rating": 3
     },
@@ -39,8 +40,9 @@
       "quantity": "1",
       "price": "1000001",
       "id": 16,
-      "count": 16,
-      "userId": 7
+      "count": 18,
+      "userId": 7,
+      "rating": 4
     },
     {
       "productName": "Motorola One Power",
@@ -60,8 +62,9 @@
       "quantity": "11231",
       "price": "121111",
       "id": 19,
-      "count": 11,
-      "userId": 7
+      "count": 13,
+      "userId": 7,
+      "rating": 5
     },
     {
       "productName": "Shurikens",

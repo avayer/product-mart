@@ -10,8 +10,6 @@ import './ProductDetail.css';
 
 const ProductDetail = (props) => {
 
-    const [pname, setpname] = useState(true)
-    const [pprice, setpprice] = useState(true)
     const [pdesc, setpdesc] = useState(false)
     const [prating, setprating] = useState(false)
     const [pmanuf, setpmanuf] = useState(false)
@@ -93,13 +91,13 @@ const ProductDetail = (props) => {
         }
 
         const disyplayName = (
-            pname ? <div>{productName}</div> : null
+            <div>{productName}</div>
         );
         const disyplayDesc = (
             pdesc ? <div>Description:{productDesc}</div> : null
         );
         const disyplayPrice = (
-            pprice ? <div>Rs:{price}</div> : null
+            <div>Rs:{price}</div>
         );
         const disyplayManufacturer = (
             pmanuf ? <div>Company: {manufacturer}</div> : null
@@ -131,10 +129,10 @@ const ProductDetail = (props) => {
           <div className="row">
             <div className="col-sm-12 col-lg-4">
               <div className="boxes">
-                <input type="checkbox" id="box-1" checked={pname} disabled />
+                <input type="checkbox" id="box-1" checked disabled />
                 <label htmlFor="box-1"> Product name</label>
                 <br />
-                <input type="checkbox" id="box-2" checked={pprice} disabled />
+                <input type="checkbox" id="box-2" checked disabled />
                 <label htmlFor="box-2"> Price</label>
                 <br />
                 <input

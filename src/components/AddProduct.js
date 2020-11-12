@@ -15,9 +15,9 @@ const AddProduct = (props) => {
     }, []);
 
     const style = {
-        width:"40%",
-        margin:"0 auto"
-    }
+      width: "60vh",
+      margin: "0 auto",
+    };
 
     return (
       <div>

@@ -6,7 +6,7 @@ import NavbarComponent from './ui-components/NavbarComponent';
 
 
 const style = {
-  width: "40%",
+  width: "60vh",
   margin: "0 auto",
 };
 

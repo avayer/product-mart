@@ -7,7 +7,7 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 106,
+      "count": 110,
       "userId": 2,
       "rating": 4.3
     },
@@ -18,9 +18,8 @@
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 37,
-      "userId": 7,
-      "rating": 4
+      "count": 41,
+      "userId": 7
     },
     {
       "productName": "Dell Vostro Core i3",
@@ -34,26 +33,14 @@
       "rating": 3
     },
     {
-      "productName": "Microsoft Surface Pro i5",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Microsoft",
-      "quantity": "1",
-      "price": "1000001",
-      "id": 16,
-      "count": 18,
-      "userId": 7,
-      "rating": 4
-    },
-    {
       "productName": "Motorola One Power",
       "productDesc": "Android SmartPhone",
       "manufacturer": "Motorola",
       "quantity": "10",
-      "price": "101010",
-      "count": 4,
-      "userId": 7,
+      "price": "1010101",
       "id": 18,
-      "rating": 4.8
+      "count": 6,
+      "userId": 7
     },
     {
       "productName": "Bajaj Fan",
@@ -87,6 +74,17 @@
       "userId": 15,
       "rating": 3,
       "id": 21
+    },
+    {
+      "productName": "Omron Weighing Machine",
+      "productDesc": "Digital Weighing Machine with lbs and kgs units",
+      "manufacturer": "Omron",
+      "quantity": "12",
+      "price": "23212",
+      "count": 0,
+      "userId": 7,
+      "rating": 0,
+      "id": 22
     }
   ],
   "users": [
@@ -170,7 +168,8 @@
       "mobileNumber": "new",
       "id": 7,
       "cart": [
-        10
+        10,
+        18
       ]
     },
     {

@@ -9,8 +9,8 @@ import NavbarComponent from "./ui-components/NavbarComponent";
 import dataApi from "../api/dataApi";
 
 const style = {
-  width: "40%",
-  margin: 'auto',
+  width: "60vh",
+  margin: "auto",
 };
 
 const RegisterPage = (props) => {

@@ -6,9 +6,9 @@ import dataApi from '../api/dataApi';
 import NavbarComponent from './ui-components/NavbarComponent';
 
 const style = {
-  'width': '40%',
-  'margin': '10% auto'
-}
+  width: "60vh",
+  margin: "10% auto",
+};
 
 const LoginPage = (props) => {
 

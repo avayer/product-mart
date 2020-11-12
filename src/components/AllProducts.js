@@ -5,6 +5,7 @@ import { fetchProducts } from '../actions';
 import ProductsList from './ProductsList';
 import SearchField from './SearchField';
 import NavbarComponent from "./ui-components/NavbarComponent";
+import './AllProducts.css';
 
 class AllProducts extends React.Component {
   state = {
@@ -57,14 +58,19 @@ class AllProducts extends React.Component {
       <div>
         <NavbarComponent />
         <SearchField onTermSubmit={this.onSearchSubmit} />
-        <div className="customizationCheckboxes" style={{'textAlign': 'center', 'marginTop': '20px'}}>
-          <input type="checkbox" id="box-3" onChange={this.changepmanuf} />
-          <label htmlFor="box-3"> Manufacturer</label>
-          <input type="checkbox" id="box-3" onChange={this.changeprating} />
-          <label htmlFor="box-3"> Rating</label>
-          <input type="checkbox" id="box-3" onChange={this.changepquan} />
-          <label htmlFor="box-3"> quantity</label>
-        </div>
+        <h3>Customization</h3>
+        <label class="container-checkbox">Manufacturer
+          <input type="checkbox" onChange={this.changepmanuf} />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-checkbox">Rating
+          <input type="checkbox" onChange={this.changeprating} />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-checkbox">Quantity
+          <input type="checkbox" onChange={this.changepquan} />
+          <span class="checkmark"></span>
+        </label>
         <p style={{ textAlign: "center", marginTop: "10px" }}>
           {this.state.msg}
         </p>

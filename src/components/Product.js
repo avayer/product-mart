@@ -47,7 +47,7 @@ const Product = (props) => {
         <div class="card" style={{ width: "18rem" }}>
           <img
             class="card-img-top"
-            src="https://via.placeholder.com/150"
+            src="https://www.humanperformancehub.co.uk/wp-content/uploads/test-product.png"
             alt="Card image cap"
           />
           <div class="card-body">

@@ -90,7 +90,7 @@ const EditProduct = (props) => {
                   </label>
                   <Field
                     name="productDesc"
-                    type="textarea"
+                    type="text"
                     className={`${
                       errors.productDesc && touched.productDesc
                     } ? is-invalid : ''`}

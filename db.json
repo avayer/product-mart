@@ -39,7 +39,7 @@
       "quantity": "10",
       "price": "1010101",
       "id": 18,
-      "count": 6,
+      "count": 7,
       "userId": 7
     },
     {
@@ -59,7 +59,7 @@
       "manufacturer": "Konaha tools",
       "quantity": "12903",
       "price": "2093",
-      "count": 0,
+      "count": 1,
       "userId": 13,
       "rating": 1,
       "id": 20
@@ -85,6 +85,17 @@
       "userId": 7,
       "rating": 0,
       "id": 22
+    },
+    {
+      "productName": "PaperBombs",
+      "productDesc": "Jutsu PaperBombs ",
+      "manufacturer": "Konaha",
+      "quantity": "123",
+      "price": "232",
+      "count": 0,
+      "userId": 13,
+      "rating": 1,
+      "id": 23
     }
   ],
   "users": [

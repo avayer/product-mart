@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing App Component Snapshot of App component 1`] = `
+<Container>
+  <Suspense
+    fallback={
+      <div>
+        <Spinner />
+      </div>
+    }
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          }
+        }
+        exact={true}
+        path="/products"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          }
+        }
+        path="/login"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          }
+        }
+        path="/register"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "type": [Function],
+          }
+        }
+        path="/addProduct"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "type": [Function],
+          }
+        }
+        path="/myproducts"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "type": [Function],
+          }
+        }
+        path="/cart"
+      />
+      <Route
+        path="/myprofile"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        path="/products/edit"
+        render={[Function]}
+      />
+      <Route
+        path="/products/:name"
+        render={[Function]}
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "type": [Function],
+          }
+        }
+        path="/productStats"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </Suspense>
+</Container>
+`;

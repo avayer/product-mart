@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Navbar Component Snapshot of Navbar component 1`] = `
+<div>
+  <Navbar
+    bg="light"
+    collapseOnSelect={false}
+    expand="lg"
+    variant="light"
+  >
+    <NavbarBrand>
+      <Link
+        className="brand-name"
+        to="/"
+      >
+        Product Mart
+      </Link>
+    </NavbarBrand>
+    <NavbarToggle
+      aria-controls="basic-navbar-nav"
+      label="Toggle navigation"
+    />
+    <NavbarCollapse
+      id="basic-navbar-nav"
+    >
+      <Nav
+        className="ml-auto"
+        fill={false}
+        justify={false}
+      >
+        <NavLink
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="link"
+          disabled={false}
+        >
+          <Link
+            to="/products"
+          >
+            Products
+          </Link>
+        </NavLink>
+        <NavLink
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="link"
+          disabled={false}
+        >
+          <Link
+            to="/login"
+          >
+            Login
+          </Link>
+        </NavLink>
+        <NavLink
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          className="link"
+          disabled={false}
+        >
+          <Link
+            to="/register"
+          >
+            Register
+          </Link>
+        </NavLink>
+      </Nav>
+    </NavbarCollapse>
+  </Navbar>
+</div>
+`;

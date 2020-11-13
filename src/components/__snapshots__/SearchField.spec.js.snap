@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing SearchField Component Snapshot of SearchField component 1`] = `
+<div
+  className="ui one column stackable center aligned page grid"
+  style={
+    Object {
+      "marginTop": "5px",
+    }
+  }
+>
+  <div
+    class="ui action input"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search products"
+      type="text"
+    />
+    <button
+      className="ui icon button"
+      disabled={true}
+    >
+      <i
+        class="search icon"
+      />
+    </button>
+  </div>
+</div>
+`;

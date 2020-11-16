@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { useHistory, Link } from 'react-router-dom';
 
@@ -9,11 +9,6 @@ import NavbarComponent from './ui-components/NavbarComponent';
 import './ProductDetail.css';
 
 const ProductDetail = (props) => {
-
-    const [pdesc, setpdesc] = useState(false)
-    const [prating, setprating] = useState(false)
-    const [pmanuf, setpmanuf] = useState(false)
-    const [pquan, setpquan] = useState(false)
 
         let history = useHistory();
         const {
@@ -79,7 +74,7 @@ const ProductDetail = (props) => {
         function showAddCartButton() {
           if(localStorage.getItem('id')!==null) {
             return (
-              <button className="btn btn-success"
+              <button className="btn btn-success adc"
                 onClick={() =>
                   addproductToUserCart(parseInt(localStorage.getItem('id')), id)
                 }
@@ -90,95 +85,39 @@ const ProductDetail = (props) => {
           }
         }
 
-        const disyplayName = (
-            <div>{productName}</div>
-        );
-        const disyplayDesc = (
-            pdesc ? <div>Description:{productDesc}</div> : null
-        );
-        const disyplayPrice = (
-            <div>Rs:{price}</div>
-        );
-        const disyplayManufacturer = (
-            pmanuf ? <div>Company: {manufacturer}</div> : null
-        );
-        const disyplayQuantity = (
-            pquan ? <div>In Stock: {quantity}</div> : null
-        );
-        const disyplayRating = (
-            prating ? <div>Rating: {rating}</div> : null
-        );
-
-        function changepmanuf() {
-          setpmanuf(!pmanuf)
-        }
-        function changepdesc() {
-          setpdesc(!pdesc);
-        }
-        function changeprating() {
-          setprating(!prating);
-        }
-        function changepquan() {
-          setpquan(!pquan)
-        }
-
     return (
       <div>
         <NavbarComponent />
         <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-lg-4">
-              <div className="boxes">
-                <input type="checkbox" id="box-1" checked disabled />
-                <label htmlFor="box-1"> Product name</label>
-                <br />
-                <input type="checkbox" id="box-2" checked disabled />
-                <label htmlFor="box-2"> Price</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="box-3"
-                  checked={pmanuf}
-                  onChange={changepmanuf}
-                />
-                <label htmlFor="box-3"> Manufacturer</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="box-3"
-                  checked={pdesc}
-                  onChange={changepdesc}
-                />
-                <label htmlFor="box-3"> Description</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="box-3"
-                  checked={prating}
-                  onChange={changeprating}
-                />
-                <label htmlFor="box-3"> Rating</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="box-3"
-                  checked={pquan}
-                  onChange={changepquan}
-                />
-                <label htmlFor="box-3"> quantity</label>
-              </div>
+          <div className="box">
+            <div className="product-img">
+              <img
+                src="http://images.ifun.de/wp-content/uploads/2015/09/fire-tablet-500.jpg"
+                width="250"
+                alt=""
+              />
             </div>
-            <div className="col-sm-12 col-lg-6">
-              <div className="productCard">
-                {disyplayName}
-                {disyplayManufacturer}
-                {disyplayDesc}
-                {disyplayRating}
-                {disyplayPrice}
-                {disyplayQuantity}
-                {showButtonsBasedOnAuth(userId)}
-                {showAddCartButton()}
-              </div>
+            <div className="product-info">
+              <h1>{productName}</h1>
+              <p>
+                <strong>Rs. {price}</strong>
+              </p>
+              <p>
+                <i className="info circle icon"></i>
+                {productDesc}.
+              </p>
+              <br />
+              <p>
+                <i class="hashtag icon"></i>In stock: {quantity}
+              </p>
+              <br />
+              <p>
+                <i class="star outline icon"></i>
+                {rating}
+              </p>
+              <br />
+              <br />
+              {showAddCartButton()}
             </div>
           </div>
         </div>

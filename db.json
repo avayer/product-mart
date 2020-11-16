@@ -7,7 +7,7 @@
       "quantity": "1",
       "price": "66000",
       "id": 8,
-      "count": 110,
+      "count": 121,
       "userId": 2,
       "rating": 4.3
     },
@@ -18,19 +18,8 @@
       "quantity": "1",
       "price": "68000",
       "id": 12,
-      "count": 41,
+      "count": 57,
       "userId": 7
-    },
-    {
-      "productName": "Dell Vostro Core i3",
-      "productDesc": "Gaming Laptop",
-      "manufacturer": "Dell",
-      "quantity": "1",
-      "price": "37000",
-      "id": 15,
-      "count": 16,
-      "userId": 7,
-      "rating": 3
     },
     {
       "productName": "Motorola One Power",
@@ -39,7 +28,7 @@
       "quantity": "10",
       "price": "1010101",
       "id": 18,
-      "count": 7,
+      "count": 13,
       "userId": 7
     },
     {
@@ -49,7 +38,7 @@
       "quantity": "11231",
       "price": "121111",
       "id": 19,
-      "count": 13,
+      "count": 18,
       "userId": 7,
       "rating": 5
     },
@@ -59,7 +48,7 @@
       "manufacturer": "Konaha tools",
       "quantity": "12903",
       "price": "2093",
-      "count": 1,
+      "count": 4,
       "userId": 13,
       "rating": 1,
       "id": 20
@@ -70,7 +59,7 @@
       "manufacturer": "self",
       "quantity": "21",
       "price": "121",
-      "count": 0,
+      "count": 1,
       "userId": 15,
       "rating": 3,
       "id": 21
@@ -81,7 +70,7 @@
       "manufacturer": "Omron",
       "quantity": "12",
       "price": "23212",
-      "count": 0,
+      "count": 3,
       "userId": 7,
       "rating": 0,
       "id": 22
@@ -92,10 +81,21 @@
       "manufacturer": "Konaha",
       "quantity": "123",
       "price": "232",
-      "count": 0,
+      "count": 2,
       "userId": 13,
       "rating": 1,
       "id": 23
+    },
+    {
+      "productName": "Lenovo Tablet M10",
+      "productDesc": "The Lenovo Tab M10 tablet features a 10.1 inches",
+      "manufacturer": "Lenovo",
+      "quantity": "12",
+      "price": "19999",
+      "count": 3,
+      "userId": 7,
+      "rating": 2,
+      "id": 24
     }
   ],
   "users": [
@@ -180,7 +180,8 @@
       "id": 7,
       "cart": [
         10,
-        18
+        18,
+        8
       ]
     },
     {
